@@ -1,0 +1,27 @@
+// ===== 全域變數 =====
+let currentStep = 1;
+let selectedResidency = null;
+let selectedIncomeType = null;
+let withholdingRules = null;
+let salaryTable = null;
+
+// ===== 資料載入 =====
+async function loadData() {
+    try {
+        // 載入扣繳規則
+        const rulesResponse = await fetch('withholding-rules.json');
+        withholdingRules = await rulesResponse.json();
+        
+        // 載入薪資稅額表
+        const tableResponse = await fetch('salary-withholding-table-2025.json');
+        salaryTable = await tableResponse.json();
+        
+        console.log('✅ 資料載入成功');
+    } catch (error) {
+        console.error('❌ 資料載入失敗:', error);
+        alert('資料載入失敗，請重新整理頁面');
+    }
+}
+
+// ===== XSS 防護 =====
+function san... (truncated 14642 chars)

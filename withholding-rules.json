@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "version": "114年度（2025年適用）",
+    "source": "所得稅法第88條、各類所得扣繳率標準"
+  },
+  "resident": {
+    "salary": {
+      "name": "薪資所得",
+      "methods": [
+        {"id": "flat_rate", "name": "全月給付總額扣5%", "rate": 0.05},
+        {"id": "tax_table", "name": "薪資所得扣繳稅額表", "threshold": 88501}
+      ]
+    },
+    "interest": {"name": "利息所得", "rate": 0.1, "threshold": 20010},
+    "rent": {"name": "租金所得", "rate": 0.1},
+    "royalty": {"name": "權利金所得", "rate": 0.1},
+    "professional": {"name": "執行業務所得", "rate": 0.1},
+    "commission": {"name": "佣金所得", "rate": 0.1},
+    "prize": {"name": "競技、競賽及機會中獎獎金", "rate": 0.1, "threshold": 20010}
+  },
+  "nonResident": {
+    "salary": {"name": "薪資所得", "rate": 0.18},
+    "interest": {"name": "利息所得", "rate": 0.2},
+    "rent": {"name": "租金所得", "rate": 0.2},
+    "royalty": {"name": "權利金所得", "rate": 0.2},
+    "professional": {"name": "執行業務所得", "rate": 0.2},
+    "commission": {"name": "佣金所得", "rate": 0.2}
+  }
+}
